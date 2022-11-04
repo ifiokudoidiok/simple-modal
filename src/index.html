@@ -7,6 +7,35 @@
     </head>
     <body>
         <h1>Dialog Box</h1>
+
+        <button onclick={exampleOne()}>Example One</button>
+        <button onclick={exampleTwo()}>Example Two</button>
+        <button onclick={exampleThree()}>Example Three</button>
+
         
+        <script src="./../src/DialogComponent/index.js"></script>
+        <script>
+          const exampleOne = () => {
+            window.dialogComponent.displayDialog({
+              content: 'Are you sure want to continue?',
+              truthyText: 'Yes',
+              falsyText: 'Cancel',
+              onClickTruthyBtn: () => { console.log(`Yes clicked`) },
+              onClickFalsyBtn: () => { console.log(`Cancel clicked`) }
+            })
+          }
+          const exampleTwo = () => {
+            window.dialogComponent.displayDialog()
+          }
+          const exampleThree = () => {
+            window.dialogComponent.displayDialog({
+              content: 'Did you enjoy building this?',
+              truthyText: 'Yes',
+              falsyText: 'No',
+              onClickTruthyBtn: () => { console.log(`Yes clicked`) },
+              onClickFalsyBtn: () => { console.log(`No clicked`) }
+            })
+          }
+        </script>
     </body>
 </html>
