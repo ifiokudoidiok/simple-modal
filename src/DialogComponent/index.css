@@ -1,0 +1,52 @@
+.dialog-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0; /* Cover whole page with dialog box*/
+  left: 0; /* Cover whole page with dialog box*/
+  background-color: #ad818180;
+  color: #313131;
+  font-size: 10px;
+}
+
+.dialog {
+  position: relative;
+  width: 85vw;
+  max-width: 20rem;
+  border: 1px solid #c6c6c6;
+  border-radius: 4px;
+  background-color: #fff;
+  box-sizing: border-box;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+  font-size: 12px;
+  display: flex;
+  flex-flow: row;
+  cursor: pointer;
+}
+
+.btn {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid #b29e9e;
+}
+
+.btn.truthy-btn {
+  color: #85f2a6;
+}
+
+.btn.falsy-btn {
+  color: #c01515;
+}
+
+.content {
+  padding: 60px 40px;
+  font-size: 12px;
+  text-align: center;
+}
